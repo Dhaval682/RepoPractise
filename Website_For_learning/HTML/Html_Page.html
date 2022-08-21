@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML PAGE</title>
+    <link rel="stylesheet" href="Html_Page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <!-- Logo -->
+         <img src="RadixwebLogo.png" alt="Logo" class="logo">
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <!-- Menu -->
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="#">HTML</a> </li>
+                <li><a href="../CSS/Css_page.html" target="_blank">CSS</a></li>
+            </ul>
+        </nav>
+    </header>
+   <div class="container">
+        <div class="sidebar-container">
+            <div class="btn">
+                <span class="fas fa-bars"></span>
+            </div>
+
+            <div class="sidebar">
+                
+                <div class="text">HTML</div>
+                    <ul>
+                        <li>
+                            <a href="#" class="day-1-btn">Day1 <span class="fas fa-caret-down first"></span></a>
+                            <ul class="day-1-show">
+                                <li><a href="./Day-1/Practice-1/StudentReport.html" target="iframe_a">Practice-1</a></li>
+                                <li><a href="./Day-1/Practice-2/DepartmentArranged.html" target="iframe_a">Practice-2</a></li>
+                                <li><a href="./Day-1/Assignment-1/Practical1.html" target="iframe_a">Assignment-1</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#" class="day-2-btn">Day2 <span class="fas fa-caret-down second"></span></a>
+                            <ul class="day-2-show">
+                                <li><a href="./Day-2/Assignment-1/Resume.html" target="iframe_a">Assignment-1</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="main">
+            
+            <iframe src="" name="iframe_a" height="650px" width="100%"></iframe>
+        </div>
+</div>
+    
+<script>
+    $('.btn').click(function(){
+        $(this).toggleClass("click");
+        $('.sidebar').toggleClass("show");
+    });
+    $('.day-1-btn').click(function(){
+        $('.sidebar>ul  .day-1-show').toggleClass('show');
+        $('.sidebar>ul  .first').toggleClass('rotate');
+    });
+    $('.day-2-btn').click(function(){
+        $('.sidebar>ul  .day-2-show').toggleClass('show1');
+        $('.sidebar>ul  .second').toggleClass('rotate');
+
+    });
+</script>
+</body>
+</html>
